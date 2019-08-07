@@ -1,0 +1,94 @@
+$c1 : #FF5E00;
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size:14px;
+  position: relative;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0 0 35px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+h1::before,h2::before{
+  display: none
+}
+.main-menu ul{
+  list-style: none;
+  li{
+    display: inline-block;
+  }
+  li a:hover{
+    outline: 0;
+    color: white;
+    background-color: $c1;
+    border-radius: 5px;
+    padding: 7px 12px;
+    text-decoration: none;
+  }
+  li a{
+    text-transform: uppercase;
+    transition: background .3s ease-in-out;
+    padding: 7px 12px;
+  }
+}
+.home{
+  .section-2{
+    height: 100vh;
+  }
+  .section-1{
+    background: url(../images/big-big-.png) no-repeat center center;
+    background-size: cover;
+    position: relative;
+
+    p{
+      color:#fff;
+      font-size: 26px;
+    }
+    h2{
+      font-size: 100px;
+      text-transform: uppercase;
+      color:#fff;
+    }
+    .row{
+      height: 100vh;
+    }
+  }
+}
+.nav-top{
+  z-index: 1;
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%
+}
+a:focus{
+  outline:none;
+}
+.btn-arr-down{
+  left:0;
+  bottom:0;
+  outline: none;
+  img{
+    outline:none;
+    border:0;
+  }
+}
+
+
+/*Media Query*/
+$xl: 1200px;
+
+$mlg: 1199px;
+$lg: 992px;
+
+$mmd: 991px;
+$md: 768px;
+
+$msm: 767px;
+$sm: 576px;
+
+@media (min-width: $xl){
+  .container{max-width: 1170px;}
+}
