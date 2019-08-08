@@ -35,7 +35,7 @@
 		<div class="row">
 			<div class="col-3">
 				<a href="#">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="Logo">
+					<?php echo (get_field('main_logo','options'))?'<img src="'.get_field('main_logo','options')['url'].'" alt="Logo">':''; ?>
 				</a>
 			</div>
 			<div class="d-md-none col-9 text-right">

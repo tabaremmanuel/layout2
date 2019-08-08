@@ -2,7 +2,6 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  position: relative;
   color: #333333; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,7 +44,7 @@ h1::before, h2::before {
   text-align: center; }
   .home .section-2 h3 {
     font-size: 130px;
-    font-family: "Lora", serif;
+    font-family: "Georgia";
     font-weight: 400;
     color: dimgrey; }
   .home .section-2 h4 {

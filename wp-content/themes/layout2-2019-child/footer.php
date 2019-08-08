@@ -2,31 +2,24 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h4>Sample Text</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-        <ul class="social-footer">
-          <li>
-            <a href="https://www.facebook.com" target="_blank">
-              <i class="fa fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com" target="_blank">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com" target="_blank">
-              <i class="fa fa-instagram"></i>
-            </a>
-          </li>
-        </ul>
+        <?php
+        the_field('text','options');
+        if(have_rows('social_footer','options')): ?>
+            <ul class="social-footer">
+              <?php while(have_rows('social_footer','options')): the_row(); ?>
+                <li>
+                  <a href="<?php the_sub_field('link'); ?>" target="_blank">
+                    <i class="fa fa-<?php the_sub_field('name'); ?>"></i>
+                  </a>
+                </li>
+              <?php endwhile; ?>
+            </ul>
+          <?php endif; ?>
       </div>
     </div>
   </div>
 </div>
-<?php wp_footer(); ?>
 </div> <!-- #main -->
+<?php wp_footer(); ?>
 </body>
 </html>

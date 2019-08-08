@@ -12,3 +12,13 @@ function custom_scripts_and_styles() {
    wp_enqueue_script( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery'), '', true );
    wp_enqueue_script( 'global', get_stylesheet_directory_uri().'/js/global.js', array(), '', true );
 }
+
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'General Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+}
